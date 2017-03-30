@@ -4,6 +4,7 @@
   "description": "Jira CLI focused on flexible ticket creation",
   "main": "index.js",
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.9.0",
     "inquirer": "^1.2.3",
     "jira-client": "^4.2.0",

@@ -13,11 +13,11 @@ function askForProject (options) {
 }
 
 function askForIssueType (options) {
-  return askQuestion('Issue type', options)
+  return askQuestion('Issue Type', options)
 }
 
 function askForSummary () {
-  return askQuestion('Please provide the issue name')
+  return askQuestion('Issue Title')
 }
 
 function askQuestion (prompt, choices) {
