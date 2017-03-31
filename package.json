@@ -4,8 +4,8 @@
   "description": "Jira CLI focused on flexible ticket creation",
   "main": "index.js",
   "bin": {
-      "jicli": "./bin/jicli.js",
-      "jira": "./bin/jicli.js"
+    "jicli": "./bin/jicli.js",
+    "jira": "./bin/jicli.js"
   },
   "dependencies": {
     "colors": "^1.1.2",
@@ -13,7 +13,8 @@
     "inquirer": "^1.2.3",
     "jira-client": "^4.2.0",
     "lowdb": "^0.16.0",
-    "q": "^1.5.0"
+    "q": "^1.5.0",
+    "request-promise": "^4.2.0"
   },
   "devDependencies": {
     "ava": "^0.18.2",
