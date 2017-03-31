@@ -5,6 +5,8 @@
 var program = require('commander')
 var colors = require('colors')
 
+var packageJson = require('./package.json')
+
 var api = require('./src/api')
 var config = require('./src/config')
 var issues = require('./src/issues/')
@@ -13,7 +15,7 @@ config.load()
   .then(api.load)
   .then((apiOptions) => {
     program
-      .version('0.0.1')
+      .version(packageJson.version)
 
     program
       .command('create [options]')
