@@ -21,9 +21,9 @@
     "husky": "^0.13.3"
   },
   "scripts": {
-    "precommit": "npm test",
-    "prepush": "npm test",
-    "preversion": "npm test",
+    "precommit": "npm run lint && npm test",
+    "prepush": "npm run lint && npm test",
+    "preversion": "npm run lint && npm test",
     "lint": "./node_modules/.bin/standard --verbose | snazzy",
     "test": "./node_modules/.bin/ava --verbose"
   },
