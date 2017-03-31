@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Jira CLI focused on flexible ticket creation",
   "main": "index.js",
+  "bin": {
+      "jicli": "./bin/jicli.js",
+      "jira": "./bin/jicli.js"
+  },
   "dependencies": {
     "colors": "^1.1.2",
     "commander": "^2.9.0",
