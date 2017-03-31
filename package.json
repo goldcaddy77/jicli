@@ -23,6 +23,7 @@
     "precommit": "npm test",
     "prepush": "npm test",
     "preversion": "npm test",
+    "lint": "./node_modules/.bin/standard --verbose | snazzy",
     "test": "./node_modules/.bin/ava --verbose"
   },
   "repository": {
