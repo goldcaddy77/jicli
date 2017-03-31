@@ -18,15 +18,15 @@ config.load()
       .version(packageJson.version)
 
     program
-      .command('create [options]')
+      .command('create')
       .description('Create a new issue')
-      .option('-t, --issue-type [type]', 'Issue type (numeric or enum{task, story, sub-task, epic, bug})')
       .option('-p, --project [key]', 'Project key')
+      .option('-t, --issue-type [type]', 'Issue type (numeric or enum{task, story, sub-task, epic, bug})')
       .option('-s, --summary [string]', 'Summary (title)')
       .option('-d, --description [string]', 'Description')
-      .option('-a, --assignee [username]', 'Assignee (use `me` to assign to yourself)')
       .option('-l, --labels [l1,l2,l3]', 'Labels (comma-delimited)')
-      .action((_, options) => {
+      .option('-a, --assignee [username]', 'Assignee (use `me` to assign to yourself)')
+      .action((options) => {
         return issues.create(options)
           .then((issue) => {
             console.log(`\nIssue created: ${colors.bold.green(issue.key)}\n`)
@@ -58,4 +58,6 @@ config.load()
 
     program.parse(process.argv)
   })
-  .catch(console.error)
+  .catch((err) => {
+    console.error('uncaught error running program', err)
+  })

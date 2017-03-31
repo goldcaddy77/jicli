@@ -66,10 +66,16 @@ function resolveIssueType (projectKey, type) {
   if (!isNaN(type)) {
     return type
   } else {
+    var lowerType = type.toLowerCase()
+
     // Else, look for the issue type supplied in the project's metadata
     var match = config.state().projects[projectKey].issuetypes.find((item) => {
-      return item.name.toLowerCase() === type
+      return item.name.toLowerCase() === lowerType
     })
+
+    if (!match) {
+      throw new TypeError('Invalid issue type: ', type)
+    }
 
     return match.id
   }
