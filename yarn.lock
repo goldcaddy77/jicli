@@ -562,7 +562,7 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-bluebird@^3.0.0, bluebird@^3.3:
+bluebird@^3.0.0, bluebird@^3.3, bluebird@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.0.tgz#791420d7f551eea2897453a8a77653f96606d67c"
 
@@ -1691,7 +1691,7 @@ lodash.isequal@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
-lodash@4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4, lodash@^4.13.1, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -2312,6 +2312,12 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+request-promise-core@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/request-promise-core/-/request-promise-core-1.1.1.tgz#3eee00b2c5aa83239cfb04c5700da36f81cd08b6"
+  dependencies:
+    lodash "^4.13.1"
+
 request-promise@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-3.0.0.tgz#be1edb26f41c49cd1d5656c6753d6842a1249f46"
@@ -2319,6 +2325,14 @@ request-promise@^3.0.0:
     bluebird "^3.3"
     lodash "^4.6.1"
     request "^2.34"
+
+request-promise@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/request-promise/-/request-promise-4.2.0.tgz#684f77748d6b4617bee6a4ef4469906e6d074720"
+  dependencies:
+    bluebird "^3.5.0"
+    request-promise-core "1.1.1"
+    stealthy-require "^1.0.0"
 
 request@^2.34, request@^2.81.0:
   version "2.81.0"
@@ -2490,6 +2504,10 @@ sshpk@^1.7.0:
 stack-utils@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/stack-utils/-/stack-utils-1.0.0.tgz#2392cd8ddbd222492ed6c047960f7414b46c0f83"
+
+stealthy-require@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/stealthy-require/-/stealthy-require-1.0.0.tgz#1a8ed8fc19a8b56268f76f5a1a3e3832b0c26200"
 
 steno@^0.4.1:
   version "0.4.4"
