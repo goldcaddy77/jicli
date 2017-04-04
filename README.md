@@ -75,6 +75,18 @@ Run `jicli` or `jicli --help` to get usage:
     -a, --assignee [username]   Assignee (use `me` to assign to yourself)
 ```
 
+### Config
+
+```
+Usage: config [options]
+
+  Re-initialize your config
+
+  Options:
+
+    -h, --help  output usage information
+```
+
 ## Examples
 
 ### Creating issues
