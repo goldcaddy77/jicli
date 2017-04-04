@@ -12,6 +12,9 @@ JIRA CLI focused on simple ticket creation, written in Node.
 - [Install](#install)
 - [Setup](#setup)
 - [Usage](#usage)
+- [Examples](#examples)
+- [Authentication](#authentication)
+- [Debugging](#debugging)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -23,10 +26,10 @@ JIRA CLI focused on simple ticket creation, written in Node.
 
 ## Setup
 
-On first usage, run `jira` and you will be asked for your Jira credentials:
+On first usage, run `jicli` and you will be asked for your Jira credentials:
 
 ```bash
-> jira
+> jicli
 
  Jira host:  example.atlassian.com
  Jira username : user1
@@ -34,13 +37,11 @@ On first usage, run `jira` and you will be asked for your Jira credentials:
  HTTP protocol (http or https) https
 ```
 
-Config settings will be saved in `<project-root>/.jicli`.
+Config settings will be saved in `<project-root>/.jicli/config.json`.
 
 ## Usage
 
 Run `jicli` or `jicli --help` to get usage:
-
-Note: executable also aliased as `jira`
 
 ```
   Usage: jicli [options] [command]
@@ -104,7 +105,17 @@ jicli create -p MOB -t task -s "My issue title" -d "My issue description" -l 'la
 ## Authentication
 
 When you first set up jicli, it will prompt for your username / password.  From this, it will create a token and add 
-it to the config file `<root>/.jicli`
+it to the config file `<root>/.jicli/config.json`
+
+## Debugging
+
+Project uses [debug](https://github.com/visionmedia/debug) module with debug key `jicli`.  Run:
+
+```
+DEBUG=jicli* jicli create ...
+```
+
+This will add additional debugging information to file `<root>/.jicli/logger.log` as it's strange to output to the console while requesting stdin.
 
 ## Contribute
 
