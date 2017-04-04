@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/jicli.svg)](https://www.npmjs.org/package/jicli)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-dbb30b.svg)](https://standardjs.com)
 
-## A Flexible Jira CLI
+## An interactive Jira CLI
 
 JIRA CLI focused on simple ticket creation, written in Node.
 
