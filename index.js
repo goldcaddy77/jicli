@@ -5,6 +5,7 @@
 var api = require('./lib/api')
 var config = require('./lib/config')
 var program = require('./lib/program')
+var logger = require('./lib/logger').createLogger(config.getProjectDirectory())
 
 program
   .usage('<command> [options]')
@@ -24,4 +25,5 @@ config.load()
   })
   .catch((err) => {
     console.error('Uncaught error running program', err)
+    logger.error('Uncaught error running program', err, err.stack)
   })

@@ -4,6 +4,7 @@ var chalk = require('chalk')
 
 var createIssue = require('../lib/issues/create')
 var config = require('../lib/config')
+var logger = require('../lib/logger')
 
 module.exports = function create (program) {
   program
@@ -23,6 +24,6 @@ module.exports = function create (program) {
           console.log(`\nIssue created: ${chalk.bold.green(issue.key)}\n`)
           console.log(`${state.protocol}://${state.host}/browse/${issue.key}\n`)
         })
-        .catch(program.handleError)
+        .catch(logger.handleError)
     })
 }

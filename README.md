@@ -115,7 +115,7 @@ Project uses [debug](https://github.com/visionmedia/debug) module with debug key
 DEBUG=jicli* jicli create ...
 ```
 
-This will add additional debugging information to file `<root>/.jicli/logger.log` as it's strange to output to the console while requesting stdin.
+This will add additional debugging information to file `<root>/.jicli/logger.log` instead of stdout as it's awkward to output to the console while requesting stdin.
 
 ## Contribute
 
