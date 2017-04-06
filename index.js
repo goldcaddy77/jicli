@@ -5,7 +5,7 @@
 var api = require('./lib/api')
 var config = require('./lib/config')
 var program = require('./lib/program')
-var logger = require('./lib/logger').createLogger(config.getProjectDirectory())
+var logger = require('./lib/logger').createLogger(config.getProjectConfigDirectory())
 
 program
   .usage('<command> [options]')

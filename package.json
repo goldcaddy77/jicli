@@ -12,6 +12,7 @@
     "colors": "^1.1.2",
     "commander": "^2.9.0",
     "debug": "^2.6.3",
+    "find-config": "^1.0.0",
     "inquirer": "^1.2.3",
     "jira-client": "^4.2.0",
     "lowdb": "^0.16.0",

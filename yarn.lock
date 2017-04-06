@@ -1165,6 +1165,12 @@ find-cache-dir@^0.1.1:
     mkdirp "^0.5.1"
     pkg-dir "^1.0.0"
 
+find-config@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/find-config/-/find-config-1.0.0.tgz#eafa2b9bc07fa9c90e9a0c3ef9cecf1cc800f530"
+  dependencies:
+    user-home "^2.0.0"
+
 find-parent-dir@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/find-parent-dir/-/find-parent-dir-0.3.0.tgz#33c44b429ab2b2f0646299c5f9f718f376ff8d54"
@@ -3098,6 +3104,12 @@ url-parse-lax@^1.0.0:
   resolved "https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-1.0.0.tgz#7af8f303645e9bd79a272e7a14ac68bc0609da73"
   dependencies:
     prepend-http "^1.0.1"
+
+user-home@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/user-home/-/user-home-2.0.0.tgz#9c70bfd8169bc1dcbf48604e0f04b8b49cde9e9f"
+  dependencies:
+    os-homedir "^1.0.0"
 
 util-deprecate@~1.0.1:
   version "1.0.2"

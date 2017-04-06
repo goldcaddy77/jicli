@@ -88,6 +88,18 @@ Usage: config [options]
     -h, --help  output usage information
 ```
 
+Jicli uses the `find-config` package to look for the `.jicli` folder.  The order used:
+
+- Current working directory
+- Navigate up parent directories under getting to `/`
+- Finally, look in home directory
+
+If not found, the following is done to determine where to create the `.jicli` folder:
+
+- If current working directory has a `package.json` file, create folder here
+- If not, navigate up parent directories looking for `package.json` until you hit `/`
+- If not found, create folder in current directory
+
 ## Examples
 
 ### Creating issues
