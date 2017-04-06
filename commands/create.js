@@ -16,7 +16,16 @@ module.exports = function create (program) {
     .option('-d, --description [string]', 'Description')
     .option('-l, --labels [l1,l2,l3]', 'Labels (comma-delimited)')
     .option('-a, --assignee [username]', 'Assignee (use `me` to assign to yourself)')
-    .action((options) => {
+    .action((program) => {
+      // passing program in blindly causes a conflict because we have a `description` option and there is a
+      // description method on `program`
+      var options = {}
+      for (let key in program) {
+        if (program.hasOwnProperty(key)) {
+          options[key] = program[key]
+        }
+      }
+
       return createIssue(options)
         .then((issue) => {
           var state = config.getState()
