@@ -13,7 +13,8 @@ module.exports = function create (program) {
     .option('-p, --project [key]', 'Project key')
     .option('-t, --issue-type [type]', 'Issue type (numeric or enum{task, story, sub-task, epic, bug})')
     .option('-s, --summary [string]', 'Summary (title)')
-    .option('-d, --description [string]', 'Description')
+    .option('-d, --description [string]', 'Description (opens in editor)')
+    .option('-x, --skip-description', 'Skip entering the description field')
     .option('-l, --labels [l1,l2,l3]', 'Labels (comma-delimited)')
     .option('-a, --assignee [username]', 'Assignee (use `me` to assign to yourself)')
     .action((program) => {
@@ -32,6 +33,8 @@ module.exports = function create (program) {
 
           console.log(`\nIssue created: ${chalk.bold.green(issue.key)}\n`)
           console.log(`${state.protocol}://${state.host}/browse/${issue.key}\n`)
+
+          process.exit()
         })
         .catch(logger.handleError)
     })

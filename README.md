@@ -70,7 +70,8 @@ Run `jicli` or `jicli --help` to get usage:
     -p, --project [key]         Project key
     -t, --issue-type [type]     Issue type (numeric or enum{task, story, sub-task, epic, bug})
     -s, --summary [string]      Summary (title)
-    -d, --description [string]  Description
+    -d, --description [string]  Description (opens in editor)
+    -x, --skip-description      Skip entering the description field
     -l, --labels [l1,l2,l3]     Labels (comma-delimited)
     -a, --assignee [username]   Assignee (use `me` to assign to yourself)
 ```
