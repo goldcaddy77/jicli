@@ -23,14 +23,16 @@
   "devDependencies": {
     "ava": "^0.18.2",
     "husky": "^0.13.3",
-    "np": "^2.13.1"
+    "np": "^2.13.1",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2"
   },
   "scripts": {
     "deploy": "node_modules/.bin/np",
     "precommit": "npm run lint && npm test",
     "prepush": "npm run lint && npm test",
     "preversion": "npm run lint && npm test",
-    "lint": "./node_modules/.bin/standard --verbose | snazzy",
+    "lint": "./node_modules/.bin/standard --verbose | ./node_modules/.bin/snazzy",
     "test": "./node_modules/.bin/ava --verbose"
   },
   "repository": {
